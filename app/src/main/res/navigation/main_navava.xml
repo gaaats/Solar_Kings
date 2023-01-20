@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navava"
+    app:startDestination="@id/serviceLoadFragment">
+
+    <fragment
+        android:id="@+id/serviceLoadFragment"
+        android:name="com.superplusgames.hosandro.ServiceLoadFragment"
+        android:label="fragment_service_load"
+        tools:layout="@layout/fragment_service_laod" >
+        <action
+            android:id="@+id/action_serviceLoadFragment_to_mainFilteringFragment"
+            app:destination="@id/mainFilteringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFilteringFragment"
+        android:name="com.superplusgames.hosandro.MainFilteringFragment"
+        android:label="fragment_main_filtering"
+        tools:layout="@layout/fragment_main_filtering" />
+</navigation>

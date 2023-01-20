@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_navaa"
+    app:startDestination="@id/seccciisFragment">
+
+    <fragment
+        android:id="@+id/oniiiiitFragment"
+        android:name="com.superplusgames.hosandro.OniiiiitFragment"
+        android:label="fragment_oniiiiit"
+        tools:layout="@layout/fragment_oniiiiit" >
+        <action
+            android:id="@+id/action_oniiiiitFragment_to_seccciisFragment"
+            app:destination="@id/seccciisFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/oniiiiitFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/seccciisFragment"
+        android:name="com.superplusgames.hosandro.SeccciisFragment"
+        android:label="fragment_seccciis"
+        tools:layout="@layout/fragment_seccciis" >
+        <action
+            android:id="@+id/action_seccciisFragment_to_oniiiiitFragment"
+            app:destination="@id/oniiiiitFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/oniiiiitFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
