@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/oniiiiitFragment"
-        android:name="com.superplusgames.hosandro.OniiiiitFragment"
+        android:name="com.superplusgames.hosandro.presenation.OniiiiitFragment"
         android:label="fragment_oniiiiit"
         tools:layout="@layout/fragment_oniiiiit" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/seccciisFragment"
-        android:name="com.superplusgames.hosandro.SeccciisFragment"
+        android:name="com.superplusgames.hosandro.presenation.SeccciisFragment"
         android:label="fragment_seccciis"
         tools:layout="@layout/fragment_seccciis" >
         <action

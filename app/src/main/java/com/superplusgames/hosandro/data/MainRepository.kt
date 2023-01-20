@@ -1,4 +1,4 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.data
 
 import com.superplusgames.hosandro.apiii.CountryCodeJS
 import com.superplusgames.hosandro.apiii.DevilDataEntity

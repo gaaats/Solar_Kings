@@ -1,6 +1,5 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.presenation
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +17,9 @@ import com.superplusgames.hosandro.data.Constances.DEEPLINK
 import com.superplusgames.hosandro.data.Constances.DEEPLINKNOAPPS
 import com.superplusgames.hosandro.data.Constances.GEO
 import com.superplusgames.hosandro.data.DataHolder
+import com.superplusgames.hosandro.data.DataHolder.INPUT_FILE_REQUEST_CODE
+import com.superplusgames.hosandro.data.DataHolder.mCameraPhotoPath
+import com.superplusgames.hosandro.data.DataHolder.mFilePathCallback
 import com.superplusgames.hosandro.databinding.ActivityBrooooovvvssBinding
 import com.superplusgames.hosandro.domain.BrovserVeivModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,16 +33,12 @@ import java.util.*
 @AndroidEntryPoint
 @ActivityScoped
 class BrooooovvvssActivity : AppCompatActivity() {
-
     private val brovserVeivModel by viewModels<BrovserVeivModel>()
-
     private lateinit var bindBeam: ActivityBrooooovvvssBinding
     lateinit var beam: WebView
-
-
-    private var mFilePathCallback: ValueCallback<Array<Uri>>? = null
-    private var mCameraPhotoPath: String? = null
-    private  val INPUT_FILE_REQUEST_CODE = 1
+//    private var mFilePathCallback: ValueCallback<Array<Uri>>? = null
+//    private var mCameraPhotoPath: String? = null
+//    private  val INPUT_FILE_REQUEST_CODE = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +50,6 @@ class BrooooovvvssActivity : AppCompatActivity() {
         CookieManager.getInstance().setAcceptThirdPartyCookies(beam, true)
 
         brovserVeivModel.webSet(beam)
-
 
         beam.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
@@ -173,83 +170,21 @@ class BrooooovvvssActivity : AppCompatActivity() {
         }
 
         fun createImageFile(): File? {
-            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-            val imageFileName = "JPEG_" + timeStamp + "_"
-            val storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES
-            )
-            return File.createTempFile(
-                imageFileName,
-                ".jpg",
-                storageDir
-            )
+            return brovserVeivModel.createImageFile()
         }
     }
 
     private fun urururururururur(): String {
-
-        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
-//
-//
-//        val sharPre = getSharedPreferences("SHARED_PREF",
-//            Context.MODE_PRIVATE)
-
-        val link = DataHolder.MAIN_LINK_FOR_VEB_VIEV
-        val myTrId = DataHolder.instId
-        val afId = DataHolder.appsID
-
-        val interd = DataHolder.typeOfPromotion
-
-        when (interd) {
-            CAMPAIGN -> {
-                Log.d("lolo", "when (interd) CAMPAIGN")
-                brovserVeivModel.pushToOS(afId.toString())
-            }
-            DEEPLINK -> {
-                Log.d("lolo", "when (interd) DEEPLINK")
-                brovserVeivModel.pushToOS(afId.toString())
-            }
-            DEEPLINKNOAPPS -> {
-                Log.d("lolo", "when (interd) DEEPLINKNOAPPS")
-                brovserVeivModel.pushToOS(myTrId.toString())
-            }
-            GEO -> {
-                Log.d("lolo", "when (interd) GEO")
-                brovserVeivModel.pushToOS(myTrId.toString())
-            }
-
-        }
-
-        Log.d("lolo", "liiinka, ${link}")
-
-        return spoon.getString("SAVED_URL", link).toString()
+        return brovserVeivModel.urururururururur()
     }
 
     var urlfififif = ""
     fun saveUrl(lurlurlurlurlur: String?) {
-        if (!lurlurlurlurlur!!.contains("t.me")) {
-
-            if (urlfififif == "") {
-                urlfififif = getSharedPreferences(
-                    "SP_WEBVIEW_PREFS",
-                    AppCompatActivity.MODE_PRIVATE
-                ).getString(
-                    "SAVED_URL",
-                    lurlurlurlurlur
-                ).toString()
-
-                val spspspspsppspspsp = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
-                val ededededededed = spspspspsppspspsp.edit()
-                ededededededed.putString("SAVED_URL", lurlurlurlurlur)
-                ededededededed.apply()
-            }
-        }
+        brovserVeivModel.saveUrl(lurlurlurlurlur)
     }
 
     private var jkikiiik = false
     override fun onBackPressed() {
-
-
         if (beam.canGoBack()) {
             if (jkikiiik) {
                 beam.stopLoading()

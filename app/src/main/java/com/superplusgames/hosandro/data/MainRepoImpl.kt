@@ -10,7 +10,6 @@ import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
-import com.superplusgames.hosandro.MainRepository
 import com.superplusgames.hosandro.apiii.CountryCodeJS
 import com.superplusgames.hosandro.apiii.DevilApi
 import com.superplusgames.hosandro.apiii.DevilDataEntity
@@ -28,7 +27,6 @@ import com.superplusgames.hosandro.data.Constances.keyMainForSharedPref
 import com.superplusgames.hosandro.data.Constances.keyNaming
 import com.superplusgames.hosandro.data.Constances.key_myID
 import com.superplusgames.hosandro.data.Constances.key_my_first_time
-import com.superplusgames.hosandro.data.DataHolder.instId
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

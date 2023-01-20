@@ -1,4 +1,4 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.presenation
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
+import com.superplusgames.hosandro.R
 import com.superplusgames.hosandro.databinding.FragmentSeccciisBinding
 
 

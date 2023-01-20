@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/serviceLoadFragment"
-        android:name="com.superplusgames.hosandro.ServiceLoadFragment"
+        android:name="com.superplusgames.hosandro.presenation.ServiceLoadFragment"
         android:label="fragment_service_load"
         tools:layout="@layout/fragment_service_laod" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFilteringFragment"
-        android:name="com.superplusgames.hosandro.MainFilteringFragment"
+        android:name="com.superplusgames.hosandro.presenation.MainFilteringFragment"
         android:label="fragment_main_filtering"
         tools:layout="@layout/fragment_main_filtering" />
 </navigation>

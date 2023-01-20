@@ -2,13 +2,22 @@ package com.superplusgames.hosandro.domain
 
 import android.app.Application
 import android.content.pm.PackageManager
+import android.os.Environment
+import android.util.Log
 import android.webkit.WebSettings
 import android.webkit.WebView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import com.onesignal.OneSignal
+import com.superplusgames.hosandro.data.Constances
+import com.superplusgames.hosandro.data.DataHolder
+import com.superplusgames.hosandro.data.DataHolder.urlfififif
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
@@ -100,4 +109,73 @@ class BrovserVeivModel @Inject constructor(private val application: Application)
         }
         return false
     }
+
+    fun createImageFile(): File? {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val imageFileName = "JPEG_" + timeStamp + "_"
+        val storageDir = Environment.getExternalStoragePublicDirectory(
+            Environment.DIRECTORY_PICTURES
+        )
+        return File.createTempFile(
+            imageFileName,
+            ".jpg",
+            storageDir
+        )
+    }
+
+    fun urururururururur(): String {
+
+        val spoon = application.getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+        val link = DataHolder.MAIN_LINK_FOR_VEB_VIEV
+        val myTrId = DataHolder.instId
+        val afId = DataHolder.appsID
+
+        val interd = DataHolder.typeOfPromotion
+
+        when (interd) {
+            Constances.CAMPAIGN -> {
+                Log.d("lolo", "when (interd) CAMPAIGN")
+                pushToOS(afId.toString())
+            }
+            Constances.DEEPLINK -> {
+                Log.d("lolo", "when (interd) DEEPLINK")
+                pushToOS(afId.toString())
+            }
+            Constances.DEEPLINKNOAPPS -> {
+                Log.d("lolo", "when (interd) DEEPLINKNOAPPS")
+                pushToOS(myTrId.toString())
+            }
+            Constances.GEO -> {
+                Log.d("lolo", "when (interd) GEO")
+                pushToOS(myTrId.toString())
+            }
+
+        }
+
+        Log.d("lolo", "liiinka, ${link}")
+
+        return spoon.getString("SAVED_URL", link).toString()
+    }
+
+    fun saveUrl(lurlurlurlurlur: String?) {
+        if (!lurlurlurlurlur!!.contains("t.me")) {
+
+            if (urlfififif == "") {
+                urlfififif = application.getSharedPreferences(
+                    "SP_WEBVIEW_PREFS",
+                    AppCompatActivity.MODE_PRIVATE
+                ).getString(
+                    "SAVED_URL",
+                    lurlurlurlurlur
+                ).toString()
+
+                val spspspspsppspspsp = application.getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+                val ededededededed = spspspspsppspspsp.edit()
+                ededededededed.putString("SAVED_URL", lurlurlurlurlur)
+                ededededededed.apply()
+            }
+        }
+    }
+
+
 }

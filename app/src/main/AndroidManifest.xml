@@ -32,7 +32,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".BrooooovvvssActivity"
+            android:name=".presenation.BrooooovvvssActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:windowSoftInputMode="adjustResize">
@@ -41,7 +41,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".maaaincact.MainActivity"
             android:launchMode="singleInstance"
             android:exported="true">
             <intent-filter>

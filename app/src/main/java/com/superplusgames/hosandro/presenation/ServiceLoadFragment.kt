@@ -1,4 +1,4 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.presenation
 
 import android.os.Bundle
 import android.util.Log
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.superplusgames.hosandro.R
 import com.superplusgames.hosandro.databinding.FragmentServiceLaodBinding
 import com.superplusgames.hosandro.domain.MainerVievModel
 import dagger.hilt.android.AndroidEntryPoint

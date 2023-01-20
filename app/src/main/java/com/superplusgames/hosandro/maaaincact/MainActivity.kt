@@ -1,25 +1,40 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.maaaincact
 
 import android.annotation.SuppressLint
 import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
-import com.superplusgames.hosandro.databinding.FragmentOniiiiitBinding
+import com.superplusgames.hosandro.R
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.scopes.ActivityScoped
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.util.*
-import kotlin.random.Random
+
+@AndroidEntryPoint
+@ActivityScoped
+class MainActivity : AppCompatActivity() {
+
+    val ooo = "oooo"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        if (ooo == "frrfrf") {
+            Toast.makeText(this, "frrffrr ${getDeviceCountryCode(this)}", Toast.LENGTH_SHORT).show()
+        }
+
+//        initAppsFlyerLibeer(this)
 
 
-class OniiiiitFragment : Fragment() {
+
+
+
+    }
 
     private fun getDeviceCountryCode(context: Context): String? {
         var countryCode: String?
@@ -98,126 +113,33 @@ class OniiiiitFragment : Fragment() {
         return null
     }
 
-
-
-
-    val test = "ok"
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        fragmentOniiiiitBinding = FragmentOniiiiitBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    var fragmentOniiiiitBinding: FragmentOniiiiitBinding? = null
-    val binding
-        get() = fragmentOniiiiitBinding ?: throw RuntimeException("FragmentOniiiiitBinding = null")
-
-
-    private fun rfijrogtgijogijtjgitj() {
-        requireActivity().onBackPressed()
-    }
-
-    private fun rogtjgjijtjitgijgt() {
-        Snackbar.make(
-            binding.root,
-            "There is some error, try again",
-            Snackbar.LENGTH_LONG
-        ).show()
-    }
-
-    override fun onPause() {
-        onDestroy()
-        super.onPause()
-    }
-
-    private val codesss by lazy {
-        listOf(
-            "Bingo",
-            "Jombo",
-            "Combo",
-            "Rombo",
-            "Super bonus",
-            "Mega bonus",
-        )
-    }
-
-
-    val f1 = "erthyju"
-    val f3 = "rgthyj"
-    val f4 = "erhtjk"
-    val f5 = "rgthyju"
-    val f9 = "htyjk,"
-    val f6 = "thyjuk"
-    val f7 = "rtjyk"
-    val f8 = "tyukloloollo"
-
-    val ghyhyyhyh = f1 +f3+f4+f5+f6+f7+f8+f9
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        try {
-
-            val num = Random.nextInt(from = 1000, until = 2000)
-
-            Toast.makeText(requireContext(), "${codesss.random()}. ${num} points!", Toast.LENGTH_SHORT).show()
-
-            if (test =="fygrfggfrgrf"){
-                getDeviceCountryCode(requireContext())
-                Toast.makeText(requireContext(), "frrf ${ghyhyyhyh}", Toast.LENGTH_SHORT).show()
-
-            }
-
-            if (System.currentTimeMillis()%56 == Long.MIN_VALUE) {
-                ofkrogjtitgjjtiogjitjjgtjgtji()
-            } else {
-                Log.d("loggggglo", "res")
-            }
-
-            gtgtgtjgttgj()
-
-        } catch (e: Exception) {
-            gtgtgt()
-        }
-
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-
-
-    private fun ofkrogjtitgjjtiogjitjjgtjgtji() {
-        Snackbar.make(
-            binding.root,
-            ghyhyyhyh,
-            Snackbar.LENGTH_LONG
-        ).show()
-    }
-
-
-    private fun gtgtgtjgttgj() {
-
-        binding.btnPlayGameeeeeeeeeeee.setOnClickListener {
-            fjrijijgtjgtjijgtijigtjgtj()
-        }
-    }
-
-    private fun fjrijijgtjgtjijgtijigtjgtj() {
-        findNavController().navigate(R.id.action_oniiiiitFragment_to_seccciisFragment)
-    }
-
-
-    private fun gtgtgt() {
-        rogtjgjijtjitgijgt()
-        rfijrogtgijogijtjgitj()
-    }
-
-
-
-    override fun onDestroy() {
-        fragmentOniiiiitBinding = null
-        super.onDestroy()
-    }
-
-
-
+//    private val conversionDataListener = object : AppsFlyerConversionListener {
+//        override fun onConversionDataSuccess(data: MutableMap<String, Any>?) {
+//            Log.d("lolo", "onConversionDataSuccess before loading")
+//            data?.get("campaign").toString().apply {
+//                DataHolder.naming = this
+//                DataHolder.tempNaminglLoad = this
+//                Log.d("lolo", "onConversionDataSuccess")
+//            }
+//        }
+//
+//        override fun onConversionDataFail(p0: String?) {
+//            Log.d("lolo", "onConversionDataFail")
+//        }
+//
+//        override fun onAppOpenAttribution(p0: MutableMap<String, String>?) {
+//            Log.d("lolo", "onAppOpenAttribution")
+//        }
+//
+//        override fun onAttributionFailure(p0: String?) {
+//            Log.d("lolo", "onAttributionFailure")
+//        }
+//    }
+//
+//    private fun initAppsFlyerLibeer(context: Context) {
+//        AppsFlyerLib.getInstance()
+//            .init(Constances.APPS_KEY, conversionDataListener, context)
+//        Log.d("lolo", "initAppsFlyerLibeer")
+//        AppsFlyerLib.getInstance().start(context)
+//    }
 }

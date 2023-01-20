@@ -1,7 +1,7 @@
 package com.superplusgames.hosandro.data.appclaasss
 
 import android.app.Application
-import com.superplusgames.hosandro.MainRepository
+import com.superplusgames.hosandro.data.MainRepository
 import com.superplusgames.hosandro.apiii.DevilApi
 import com.superplusgames.hosandro.apiii.GeoUserApi
 import com.superplusgames.hosandro.data.Constances.LINK_HOST

@@ -1,4 +1,4 @@
-package com.superplusgames.hosandro
+package com.superplusgames.hosandro.presenation
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.superplusgames.hosandro.data.Constances
