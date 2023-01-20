@@ -1,21 +1,45 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Keep class names of Hilt injected ViewModels since their name are used as a multibinding map key.
+-keepnames @dagger.hilt.android.lifecycle.HiltViewModel class * extends androidx.lifecycle.ViewModel
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+#Onesignal
+-dontwarn com.onesignal.**
+-keep class com.onesignal.ActivityLifecycleListenerCompat** {*;}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+#Lottie
+-dontwarn com.airbnb.lottie.**
+-keep class com.airbnb.lottie.** {*;}
+#AppsFlyer
+-keep class com.appsflyer.** { *; }
+-keep public class com.android.installreferrer.** { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Facebook
+-keep class com.facebook.** {
+   *;
+}
+
+
+#Coroutines
+-keep class kotlinx.coroutines.**
+-dontwarn kotlinx.coroutines.**
+
+# Retrofit
+-keep class com.google.gson.** { *; }
+-keep public class com.google.gson.** {public private protected *;}
+-keep class com.google.inject.** { *; }
+-keep class org.apache.http.** { *; }
+-keep class retrofit.** { *; }
+-keepattributes *Annotation*
+-keepattributes Signature
+-dontwarn com.squareup.okhttp.*
+
+
+#Volley
+-keep class com.android.volley.** { *; }
+-keep class org.apache.commons.logging.**
+-keepattributes *Annotation*
+-dontwarn org.apache.**
+
+
+-keepclassmembers,allowobfuscation class * {
+@com.google.gson.annotations.SerializedName <fields>;
+}
