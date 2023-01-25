@@ -100,12 +100,12 @@ class MainerVievModel @Inject constructor(
                                 DataHolder.typeOfPromotion = Constances.CAMPAIGN
                                 //link apps
                                 mainLinkString =
-                                    "$linka?$sub_id_1$namingggg&$deviceID$afId&$ad_id$advertId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
+                                    "$linka$sub_id_1$namingggg&$deviceID$afId&$ad_id$advertId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
                             } else if (makeGeoCheckUseCase.makeGeoCheckUseCase()) {
                                 // link geo or fb
                                 DataHolder.typeOfPromotion = Constances.DEEPLINK
                                 mainLinkString =
-                                    "$linka?$sub_id_1$deeplinka&$deviceID$afId&$ad_id$advertId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$deeporg"
+                                    "$linka$sub_id_1$deeplinka&$deviceID$afId&$ad_id$advertId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$deeporg"
                             } else {
                                 goToGame()
                                 break
@@ -131,12 +131,12 @@ class MainerVievModel @Inject constructor(
                                 //link deeplinka
                                 DataHolder.typeOfPromotion = Constances.DEEPLINKNOAPPS
                                 mainLinkString =
-                                    "$linka?$sub_id_1$deeplinka&$deviceID$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$deeporg"
+                                    "$linka$sub_id_1$deeplinka&$deviceID$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$deeporg"
                             } else if (makeGeoCheckUseCase.makeGeoCheckUseCase()) {
                                 // link geo or fb
                                 DataHolder.typeOfPromotion = Constances.GEO
                                 mainLinkString =
-                                    "$linka?$sub_id_1$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
+                                    "$linka$sub_id_1$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
                             } else {
                                 goToGame()
                                 break
