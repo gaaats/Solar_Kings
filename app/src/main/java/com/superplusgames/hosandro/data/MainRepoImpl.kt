@@ -113,14 +113,15 @@ class MainRepoImpl @Inject constructor(
         val hyjuujujikkiikikik = MyTracker.getInstanceId(application)
         hyyhhyhyyhhy.isTrackingLaunchEnabled = true
         if (sharedPreferences.getBoolean(key_my_first_time, true)) {
-            val bgbnhnhhnhyhyhyhy = UUID.randomUUID().toString()
-            trackerParamsfrrr.setCustomUserId(bgbnhnhhnhyhyhyhy)
+//            val bgbnhnhhnhyhyhyhy = UUID.randomUUID().toString()
+//            trackerParamsfrrr.setCustomUserId(bgbnhnhhnhyhyhyhy)
+
             DataHolder.instId = hyjuujujikkiikikik
             sharedPreferences.edit().putBoolean(key_my_first_time, false).apply()
 
         } else {
-            val fgrrrrr = readFromSharedPref(key_myID, "null")
-            trackerParamsfrrr.setCustomUserId(fgrrrrr)
+//            val fgrrrrr = readFromSharedPref(key_myID, "null")
+//            trackerParamsfrrr.setCustomUserId(fgrrrrr)
         }
 
         MyTracker.initTracker(MY_TRACKER_KEY, application)
