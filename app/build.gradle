@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace 'com.superplusgames.hosandro'
+    namespace 'com.fuzzyhouse.wonderwoollie'
     compileSdk 32
 
     defaultConfig {
