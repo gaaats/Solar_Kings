@@ -3,20 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navava"
-    app:startDestination="@id/serviceLoadFragment">
+    app:startDestination="@id/maaiaaiaianFragment">
+
 
     <fragment
-        android:id="@+id/serviceLoadFragment"
-        android:name="com.fuzzyhouse.wonderwoollie.presenation.ServiceLoadFragment"
-        android:label="fragment_service_load"
-        tools:layout="@layout/fragment_service_laod" >
+        android:id="@+id/maaiaaiaianFragment"
+        android:name="com.fuzzyhouse.wonderwoollie.MaaiaaiaianFragment"
+        android:label="fragment_maaiaaiaian"
+        tools:layout="@layout/fragment_maaiaaiaian" >
         <action
-            android:id="@+id/action_serviceLoadFragment_to_mainFilteringFragment"
-            app:destination="@id/mainFilteringFragment" />
+            android:id="@+id/action_maaiaaiaianFragment_to_conccococFragment"
+            app:destination="@id/conccococFragment" />
     </fragment>
     <fragment
-        android:id="@+id/mainFilteringFragment"
-        android:name="com.fuzzyhouse.wonderwoollie.presenation.MainFilteringFragment"
-        android:label="fragment_main_filtering"
-        tools:layout="@layout/fragment_main_filtering" />
+        android:id="@+id/conccococFragment"
+        android:name="com.fuzzyhouse.wonderwoollie.ConccococFragment"
+        android:label="fragment_conccococ"
+        tools:layout="@layout/fragment_conccococ" >
+        <action
+            android:id="@+id/action_conccococFragment_to_seeecMaaainFragment"
+            app:destination="@id/seeecMaaainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeecMaaainFragment"
+        android:name="com.fuzzyhouse.wonderwoollie.SeeecMaaainFragment"
+        android:label="fragment_seeec_maaain"
+        tools:layout="@layout/fragment_seeec_maaain" >
+        <action
+            android:id="@+id/action_seeecMaaainFragment_to_beffforFiilFragment"
+            app:destination="@id/beffforFiilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beffforFiilFragment"
+        android:name="com.fuzzyhouse.wonderwoollie.BeffforFiilFragment"
+        android:label="fragment_befffor_fiil"
+        tools:layout="@layout/fragment_befffor_fiil" >
+        <action
+            android:id="@+id/action_beffforFiilFragment_to_filllaFragment"
+            app:destination="@id/filllaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filllaFragment"
+        android:name="com.fuzzyhouse.wonderwoollie.FilllaFragment"
+        android:label="fragment_fillla"
+        tools:layout="@layout/fragment_fillla" />
 </navigation>
