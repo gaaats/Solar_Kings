@@ -125,7 +125,7 @@ class MainerVievModel @Inject constructor(
                     Log.d("lolo", "in 0")
                     //only fb
                     while (true) {
-                        if (DataHolder.deepLink != null) {
+                        if (DataHolder.tempDeepLoad != null) {
                             val deeplinka = DataHolder.deepLink!!
                             if (makeDepplinCheckUseCase.makeDepplinCheckUseCase()) {
                                 //link deeplinka
