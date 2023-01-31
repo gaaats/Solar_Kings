@@ -136,7 +136,7 @@ class MainerVievModel @Inject constructor(
                                 // link geo or fb
                                 DataHolder.typeOfPromotion = Constances.GEO
                                 mainLinkString =
-                                    "$linka?$sub_id_1$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
+                                    "$linka?$deviceID$instId&$ad_id$instId&$sub_id_4${Constances.PACK_NAME}&$sub_id_5$buildVers&$sub_id_6$naming_name"
                             } else {
                                 goToGame()
                                 break
