@@ -11,7 +11,6 @@ android {
 
     defaultConfig {
         applicationId "com.fuzzyhouse.wonderwoollie"
-//        applicationId "com.superplusgames.hosandro"
         minSdk 24
         targetSdk 32
         multiDexEnabled true
